@@ -1,0 +1,11 @@
+{
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "java.compile.nullAnalysis.mode": "automatic",
+    "files.eol": "\n",
+    "git.allowForcePush": true,
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "files.associations": {
+        "*.json": "jsonc"
+    }
+} 

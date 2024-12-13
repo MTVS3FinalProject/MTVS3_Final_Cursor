@@ -1,0 +1,77 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Frontend Dev",
+            "type": "shell",
+            "command": "cd ${workspaceFolder}/MTVS3_Final_FrontEnd && npm install && npm run dev",
+            "windows": {
+                "options": {
+                    "shell": {
+                        "executable": "cmd.exe",
+                        "args": ["/c"]
+                    }
+                }
+            },
+            "osx": {
+                "command": "cd ${workspaceFolder}/MTVS3_Final_FrontEnd && npm install && npm run dev",
+                "options": {
+                    "shell": {
+                        "executable": "/bin/bash",
+                        "args": ["-c"]
+                    }
+                }
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Backend Dev",
+            "type": "shell",
+            "command": "gradlew",
+            "args": [
+                "bootRun",
+                "--stacktrace",
+                "-Dspring-boot.run.jvmArguments='-Dspring.devtools.restart.enabled=true -Dspring.profiles.active=local -Dlogging.level.org.springframework=DEBUG -Dlogging.level.org.hibernate=DEBUG'",
+                "-Dfile.encoding=UTF-8"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/MTVS3_Final_BackEnd",
+                "env": {
+                    "SPRING_OUTPUT_ANSI_ENABLED": "always"
+                }
+            },
+            "windows": {
+                "command": "gradlew",
+                "options": {
+                    "shell": {
+                        "executable": "cmd.exe",
+                        "args": ["/c"]
+                    }
+                }
+            },
+            "osx": {
+                "command": "./gradlew",
+                "options": {
+                    "shell": {
+                        "executable": "/bin/bash",
+                        "args": ["-c"]
+                    }
+                }
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Dev: Frontend + Backend",
+            "dependsOn": [
+                "Frontend Dev",
+                "Backend Dev"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

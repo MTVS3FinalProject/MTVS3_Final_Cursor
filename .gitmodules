@@ -1,0 +1,6 @@
+[submodule "MTVS3_Final_BackEnd"]
+	path = MTVS3_Final_BackEnd
+	url = https://github.com/MTVS3FinalProject/MTVS3_Final_BackEnd.git
+[submodule "MTVS3_Final_FrontEnd"]
+	path = MTVS3_Final_FrontEnd
+	url = https://github.com/MTVS3FinalProject/MTVS3_Final_FrontEnd.git

@@ -1,0 +1,17 @@
+[
+    {
+        "key": "ctrl+alt+n",  // Next.js
+        "command": "workbench.action.tasks.runTask",
+        "args": "Frontend Dev"
+    },
+    {
+        "key": "ctrl+alt+b",  // Backend
+        "command": "workbench.action.tasks.runTask",
+        "args": "Backend Dev"
+    },
+    {
+        "key": "ctrl+alt+f",  // Full stack
+        "command": "workbench.action.tasks.runTask",
+        "args": "Dev: Frontend + Backend"
+    }
+] 
